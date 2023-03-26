@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<html>
+    <head>
+        <title>Assigment-08-NLP</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <style>
+            body {
+                background-color: #f2f2f2;
+            }
+            .card-header {
+                background-color: #dc3545;
+                color: white;
+            }
+            .form-control-label {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header bg-primary text-center">
+                            <h2>Assigment-09-NLP</h2>
+                            <p>NguyenThaiAnh-122910</p>
+                        </div>
+                        <div class="card-body">
+                            <form action="" method="POST">
+                                {{form.csrf_token}}
+                                <div class="form-group">
+                                    {{form.text.label(class="form-control-label")}}
+                                    {{form.text(class="form-control")}}
+                                </div>
+                                <div class="form-group">
+                                    {{form.submit(class="btn btn-primary btn-block")}}
+                                </div>
+                            </form>
+                            <hr>
+                            {% if text %}
+                                <p><strong>Type:</strong> {{text}}</p>
+                                <p><strong>Predict:</strong> {{gen}}</p>
+                            {% else %}
+                                <p class="text-danger text-center">Not Found</p>
+                            {% endif %}
+                        </div>
+                        <div class="card-footer bg-primary text-white text-center">
+                            <p>Data Science and AI</p>
+                            <h5>AIT</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>
+
+{% endblock %}
