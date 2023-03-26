@@ -1,0 +1,10 @@
+.form-input{
+    border-radius: 5px;
+    width:20rem;
+}
+.form-button{
+    border-radius: 5px;
+}
+label{
+    font-weight: bold;
+}
